@@ -1,32 +1,32 @@
 # Pen-Testing-Resources
 Collection of things I find on my journey
 
-<h3>Mitre Att&ck</h3>
+Mitre Att&ck
 
 https://attack.mitre.org/
 https://mitre-attack.github.io/attack-navigator/
 
-<h3>Exploit Databases</h3>
+Exploit Databases
 
 https://www.exploit-db.com/
 https://www.rapid7.com/db/
 https://www.vulnerability-lab.com/
 
-<h3>Linux Enumeration Scripts</h3>
+Linux Enumeration Scripts
 
 https://github.com/rebootuser/LinEnum
 https://github.com/sleventyeleven/linuxprivchecker
 
-<h3>Windows Enumeration Scripts</h3>
+Windows Enumeration Scripts
 
 https://github.com/GhostPack/Seatbelt
 https://github.com/411Hall/JAWS
 
-<h3>Linux & Windows Enumeration</h3>
+Linux & Windows Enumeration
 
 https://github.com/swisskyrepo/PayloadsAllTheThings
 
  
-<h3>Privilege Escalation Awesome Scripts SUITE</h3>
+Privilege Escalation Awesome Scripts SUITE
  
 https://github.com/carlospolop/PEASS-ng
